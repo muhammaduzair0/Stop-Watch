@@ -16,6 +16,8 @@ let minutesIncrement = 0;
 let secondsIncrement = 0;
 let milliSecondsIncrement = 0;
 
+let intervalID;
+
 const startFunc = () => {
   intervalID = setInterval(() => {
     // console.log(milliSecondsIncrement++);
@@ -38,9 +40,23 @@ const startFunc = () => {
     }
     // console.log(milliSecondsID)
   }, 10);
-  startBtn.disable = true
+  startBtn.disable = true;
 };
 
-startBtn.addEventListener('click', startFunc)
-stopBtn.addEventListener('click',)
-resetBtn.addEventListener('click', )
+const stopFunc = () => {
+  clearInterval(intervalID);
+  intervalID = null;
+  startBtn.disable = false;
+  stopBtn.disable = true;
+};
+
+const resetFunc = () => {
+   hoursIncrement = 0;
+   minutesIncrement = 0;
+   secondsIncrement = 0;
+   milliSecondsIncrement = 0;
+};
+
+startBtn.addEventListener("click", startFunc);
+stopBtn.addEventListener("click", stopFunc);
+resetBtn.addEventListener("click", resetFunc);
