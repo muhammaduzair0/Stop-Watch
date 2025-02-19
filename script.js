@@ -40,21 +40,20 @@ const startFunc = () => {
     }
     // console.log(milliSecondsID)
   }, 10);
-  startBtn.disable = true;
+  startBtn.disabled = true;
 };
 
 const stopFunc = () => {
   clearInterval(intervalID);
   intervalID = null;
-  startBtn.disable = false;
-  stopBtn.disable = true;
+  startBtn.disabled = false;
 };
 
 const resetFunc = () => {
-   hoursIncrement = 0;
-   minutesIncrement = 0;
-   secondsIncrement = 0;
-   milliSecondsIncrement = 0;
+   hoursID.textContent = 0;
+   minutesID.textContent = 0;
+   secondsID.textContent = 0;
+   milliSecondsID.textContent = 0;
 };
 
 startBtn.addEventListener("click", startFunc);
