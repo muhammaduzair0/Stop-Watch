@@ -11,6 +11,8 @@ let minutesID = document.getElementById("minutes");
 let secondsID = document.getElementById("seconds");
 let milliSecondsID = document.getElementById("milliseconds");
 
+
+// Initial Values of HH, MM, SS, MS
 let hoursIncrement = 0;
 let minutesIncrement = 0;
 let secondsIncrement = 0;
